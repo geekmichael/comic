@@ -1,3 +1,4 @@
+<div class="col-md-2">
 <div class="thumb-list-item" id="comic-<?php the_ID(); ?>">
 <a href="<?php the_permalink(); ?>" class="pic-wrap" target="_blank" title="<?php the_title(); ?>">
 <?php
@@ -12,4 +13,5 @@
 </a>
 <p class="des text-overflow">作者：<?php echo get_field('comic-author'); ?></p>
 <p class="des text-overflow">最新：<?php echo last_chapter_title('comic-chapters'); ?></p>
+</div>
 </div>

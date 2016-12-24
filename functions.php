@@ -3,6 +3,13 @@
 // theme constants
 define( 'THEME_NAME', 'comic' );
 
+//漫画题材分类ID
+define( 'COMICTHEME_CAT_ID', 31);
+//Advanced Custom Fields 自定义字段密钥
+define( 'COMIC_STATUS_KEY', 'field_58560eaf1fa66');
+define( 'COMIC_AREA_KEY', 'field_585607cece62d' );
+define( 'COMIC_AUDIENCE_KEY', 'field_585608f7ce62f' );
+
 // uri constants
 //define( 'THEME_URI', wp_make_link_relative( get_stylesheet_directory_uri() . DIRECTORY_SEPARATOR ) );
 define( 'THEME_URI', get_stylesheet_directory_uri() . DIRECTORY_SEPARATOR );

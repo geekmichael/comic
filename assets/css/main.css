@@ -1,10 +1,16 @@
 html body{
 	background-color: #f6f6f6;
 	font-size: 12px;
+	font-family: "PingFang SC", "Lantinghei SC", "Microsoft Yahei", "Hiragino Sans GB", "Microsoft Sans Serif", "WenQuanYi Micro Hei", sans-serif;
 }
 
 body,h1,h2,h3,h4,h5,h6,p,dl,dd,ol,ul,fieldset,figure,menu,blockquote,pre,hr {
 	margin:0;
+}
+
+h1[id] {
+	padding-top: 20px;
+	margin-top: 0;
 }
 
 legend,menu,ol,ul,td,th,input {
@@ -30,16 +36,43 @@ a:hover {
 	text-decoration: underline;
 	outline: 0;
 }
+
+.cat-link:hover, .cat-active {
+	background-color: #0aa770;
+	color: #fff;
+	text-decoration: none;	
+}
+
 .text-overflow {
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
 }
-.active {
-	background-color: #0aa770;
-	color: #fff;
-	text-decoration: none;
+
+.col-lg-2dot4 {
+	position: relative;
+	min-height: 1px;
+	padding-right: 15px;
+	padding-left: 15px;
 }
+@media (min-width: 1200px) {
+	.col-lg-2dot4 {
+		float: left;
+	}
+	.col-lg-2dot4 {
+		width: 20%;
+	}
+	.col-lg-pull-2dot4 {
+		right: 20%;
+	}
+	.col-lg-push-2dot4 {
+		left: 20%;
+	}
+	.col-lg-offset-2dot4 {
+		margin-left: 20%;
+	}
+}
+
 .grey333 { color: #333; }
 .grey666 { color: #666; }
 .grey999 { color: #999; }
@@ -60,21 +93,421 @@ a:hover {
 	margin-left: 5px;
 }
 
-.w930 {
-	width: 930px;
+.post-content {
+	margin-top: 20px;
 }
 
-.w910 {
-	width: 910px;
+.comic-filter-box {
+ 	border: 1px solid #e5e4e6;
 }
-
-.pull-right{
-	float: right;
+.comic-section-title {
+	height: 40px;
+	background-color: #e8e6ec;
 }
-
-.pull-left{
+.comic-section-title h2{
 	float: left;
+	line-height: 20px;
+	font-size: 16px;
+	color:#333;
+	border-left: 3px solid #0aa770;
+	padding-left: 5px;
+	margin: 11px 0 0 16px;
 }
+.comic-section-title span.count{
+	float: right;
+	height: 100%;
+	line-height: 40px;
+	font-size: 12px;
+	color: #333;
+	margin-right: 16px;
+}
+.comic-section-filter {
+	background-color: #efeef2;
+}
+
+.comic-section-criteria {
+	background-color: #efeef2;
+	padding: 8px 16px;
+	border-top: 1px solid #f6f5fa;
+}
+.comic-section-criteria li {
+	font-size: 12px;
+	margin: 8px 0;
+	line-height: 20px;
+}
+
+.comic-section-criteria li a{
+	margin-left: 2px; 
+	padding: 0 5px;
+}
+
+.comic-section-main {
+	margin-top: 18px;
+	width: 100%;
+}
+
+.comic-section-main .nav {
+	font-size: 14px;
+	background-color: #e8e6ec;
+	line-height: 40px;
+	margin-bottom: 20px;
+	padding: 0 20px;
+}
+.comic-list .col-md-2{
+	width: 19.66666%;
+	padding:0;
+	text-align: center;
+}
+
+.thumb-list-item {
+	text-align: left;
+	height: 243px;
+	margin-bottom:20px;
+}
+.thumb-list-item .pic-wrap {
+	display: block;
+	width: 135px;
+	height: 178px;
+	background: url(../images/thum-bg-135.jpg) 0 0 no-repeat;
+	position: relative;
+}
+.thumb-list-item .pic-wrap img{
+	width: 127px;
+	height: 170px;
+	vertial-align: middle;
+	margin: 1px 0 0 1px;
+}
+.thumb-list-item .title{
+	display: block;
+	width: 135px;
+	font-size: 14px;
+	color: #333;
+	margin-top: 20px;
+	line-height: 1.5;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.thumb-list-item .title:hover{
+	color:#f50;
+}
+.thumb-list-item .des {
+	width: 135px;
+	font-size: 12px;
+	color: #999;
+	line-height: 18px;
+	margin-top: 3px;
+	overflow: hidden;
+	display: inline-block;
+}
+
+.hotspot {
+	height: 446px;
+	margin-top: 10px;
+}
+.hotspot .hotspot-slider {
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.hotspot-slider .slide {
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(rgba(225,225,225,0)),to(rgba(0,0,0,.8)));
+	min-height: 446px;
+}
+
+.ranking {
+	width: 100%;
+	height: 100%;
+	background-color:#333;
+}
+.ranking .head-wrap h2.title {
+	color: #666;
+	font-size: 18px;
+	height: 30px;
+	line-height: 30px;
+	float: left;
+	margin-left: 5px;
+}
+.ranking .head-wrap h2.green-title {
+	color: #ccc;
+	border-left: 2px solid #0aa770;
+	padding-left: 8px;
+	margin: 9px 0 0 20px;
+	height: 20px;
+	font-size: 18px;
+	line-height: 20px;
+}
+.ranking .head-wrap .tab-wrap {
+	float:right;
+}
+.ranking .head-wrap .tab-wrap .item {
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	font-size:14px;
+	padding: 0 8px;
+	margin-right: 5px;
+}
+.ranking .list-wrap {
+	background-color:#333;
+	margin-top: 10px;
+	width: 100%;
+}
+.ranking .list-wrap .list-page {
+	width: 100%;
+	padding-top: 15px;
+
+}
+.ranking .list-wrap .list-page .topone {
+	padding: 0 20px;
+	height: 136px;
+}
+.ranking .list-wrap .list-page .topone .pic-wrap{
+	float: left;
+	width: 102px;
+	height: 100%;
+	background: url(../images/thum-bg.png) no-repeat;
+	position: relative;
+	margin-right: 8px;
+}
+.ranking .list-wrap .list-page .topone .pic-wrap .pic{
+	width: 94px;
+	height: 125px;
+	vertical-align: middle;
+	margin: 1px 0 0 1px;
+}
+.ranking .list-wrap .list-page .topone .pic-wrap .sort{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 25px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	background-color: #0aa770;
+	color: #fff;
+	font-size: 12px;
+}
+
+.ranking .list-wrap .list-page .topone .info-wrap{
+	width: 100px;
+	float: right;
+	font-size: 12px;
+	height: 100%;
+	line-height: 1.5;
+}
+.ranking .list-wrap .list-page .topone .info-wrap .title{
+	color: #ddd;
+	margin-top: 6px;
+}
+.ranking .list-wrap .list-page .topone .info-wrap .title:hover{
+	color:#f50;
+}
+.ranking .list-wrap .list-page .topone .info-wrap .des{
+	color:#999;
+	margin-top: 20px;
+}
+.ranking .list-wrap .list-page .topone .info-wrap .des2{
+	color:#999;
+	margin-top: 10px;
+}
+.ranking .list-wrap .list-page .topone .info-wrap .info {
+	font-size: 12px;
+	margin-top: 10px;
+}
+.ranking .list-wrap .list-page .topone .info-wrap .info .key {
+	color: #999;
+}
+.ranking .list-wrap .list-page .topone .info-wrap .info .value{
+	color: #666;
+}
+.ranking .list-wrap .list-page .topone .info-wrap .info .value a{
+	margin-right: 5px;
+}
+.ranking .list-wrap .list-page .list {
+	padding: 0 8px;
+}
+.ranking .list-wrap .list-page .list .item {
+	border-bottom: 1px dashed #555;
+	display:block;
+	height: 30px;
+	line-height: 30px;
+	font-size: 12px;
+}
+.ranking .list-wrap .list-page .list .item .sort {
+	display: inline-block;
+	color: #aaa;
+	width: 15px;
+	margin: 0 3px 0 10px;
+	text-align: center;
+	vertical-align: middle;
+}
+.ranking .list-wrap .list-page .list .item .sort.high {
+	color:#0aa770;
+}
+.ranking .list-wrap .list-page .list .item:hover .title, .ranking .list-wrap .list-page .list .item:hover .des{
+	color: #f50;
+}
+.ranking .list-wrap .list-page .list .item:hover {
+	background-color:#666;
+}
+.ranking .list-wrap .list-page .list .item .title{
+	width: 100px;
+	color: #ddd;
+	display: inline-block;
+	text-align: left;
+	vertical-align: middle;
+}
+.ranking .list-wrap .list-page .list .item .des{
+	width: 100px;
+	color: #999;
+	display: inline-block;
+	text-align: right;
+	vertical-align: middle;
+}
+.ranking-light {
+	background-color:transparent;
+}
+.ranking-light .list-wrap {
+	background-color: #eee;
+}
+.ranking-light .list-wrap:after {
+	display:table;
+	clear:both;
+	line-height:0;
+	content: "";
+}
+.ranking-light .list-wrap .list-page .list .item {
+	border-bottom: 1px dashed #d5d4d8;
+}
+.ranking-light .list-wrap .list-page .topone .info-wrap {
+	width: 110px;
+}
+.ranking-light .list-wrap .list-page .topone .info-wrap .title {
+	color: #333;
+}
+.ranking-light .list-wrap .list-page .list .item .title{
+	color: #333;
+	width: 135px;
+}
+.ranking-light .list-wrap .list-page .list .item .des{
+	color: #999;
+	width: 60px;
+}
+.ranking-light .list-wrap .list-page .list .item:hover {
+	background-color:#fefefe;
+}
+.classify-box {
+	height: 92px;
+	margin-top: 20px;
+}
+.classify-box .classify-wrap {
+	border: 1px solid #ddd;
+	background-color: #fafafa;
+}
+.classify-box-item {
+	height: 82px;
+	float: left;
+	margin-top: 8px;
+	padding: 13px 0;
+}
+.classify-title{
+	font-size: 16px;
+	color:#0aa770;
+	height: 100%;
+	border-left: 2px solid #0aa770;
+	padding-left: 10px;
+	width: 30px;
+	line-height: 16px;
+	margin-left: 16px;
+}
+.classify-list{
+	list-style: none;
+}
+.classify-list li{
+	margin-right: 20px;
+	text-align: left;
+	float: left;
+	color: #666;
+	font-size: 12px;
+	margin-bottom: 12px;
+	white-space: nowrap;
+	line-height: 1.5;
+}
+
+.comic-section {
+	margin-top: 20px;
+}
+
+.comic-sidebar {
+	
+}
+.comic-sidebar .ad{
+	display: block;
+	width: 260px;
+	height: 70px;
+	margin-top: 19px;
+}
+
+.comic-section-head {
+	height: 30px;
+}
+.comic-section-head h2 {
+	color: #666;
+	font-size: 28px;
+	float: left;
+	margin-right: 20px;
+}
+
+.featured-list {
+	padding: 20px 20px 0 20px;
+	background-color: #fff;
+}
+
+.featured-list .top-featured {
+	float: left;
+	display: block;
+	border: 1px solid #fff;
+	width: 288px;
+	height: 243px;
+	margin-bottom: 20px;
+	position: relative;
+	margin-right: 20px;
+}
+.featured-list .top-featured .pic{
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+}
+.featured-list .top-featured .title{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	font-size: 18px;
+	color:#fff;
+	height: 70px;
+	text-indent: 0.6em;
+	white-space: nowrap;
+	line-height: 60px;
+	text-overflow: ellipsis;
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(rgba(225,225,225,0)),to(rgba(0,0,0,.8)));
+}
+.featured-list .top-featured .des {
+	position: absolute;
+	width: 100%;
+	bottom: 7px;
+	left: 0;
+	font-size: 12px;
+	color: #ccc;
+	text-indent: 0.9em;
+}
+
+.latest-comic {
+	padding: 20px;
+}
+
+/* ----------------------------------*/
 
 .header, .navmenu, .wrapper, footer {
 	width: 100%;
@@ -106,8 +539,6 @@ a:hover {
 }
 
 .header .header-search-box {
-	float: right;
-	width: 350px;
 	height: 32px;
 	position: relative;
 	top: 14px;
@@ -170,29 +601,7 @@ a:hover {
 /*
  * The main body container
  */
-.wrapper {
-	width: 1190px;
-	margin: 0 auto;
-}
-.wrapper:after, .wrapper:before{
-	display: table;
-	clear:both;
-}
 
-.post-content {
-	margin: 10px 0;
-}
-
-.comic-row {
-	margin-top: 50px;
-	clear:both;
-}
-.comic-row:after, .comic-row:before {
-	clear:both;
-	display:table;
-	line-height:0;
-	content: "";
-}
 .comic-row-ad {
 	padding: 20px 0;
 	text-align: center;
@@ -202,25 +611,21 @@ a:hover {
 .breadcrumb {
 	height: 30px;
 	color: #333;
-}
-
-.widget-area {
-	width: 260px;
-	float: right;
+	margin:0;
+	padding:0;
 }
 
 .post-main {
-	width: 910px;
-	float: left;
 	background-color: #fff;
 }
 .post-main-wrapper {
 	padding: 20px;
 }
 .comic-detail-thumb {
-	float: left;
 	width: 218px;
 	height: 285px;
+	margin-left:20px;
+	padding: 0;
 	background: url(../images/thum-bg-218.jpg);
 }
 .comic-detail-thumb img{
@@ -228,10 +633,7 @@ a:hover {
 	height: 277px;
 	margin: 1px 0 0 1px;
 }
-.comic-detail-right {
-	width: 630px;
-	float: right;
-}
+
 ul.comic-attributes {
 	margin-top: 10px;
 }
@@ -269,37 +671,9 @@ h1.comic-title span{
 
 .resource-provider {
 	line-height: 1.5;
-	float: left;
-	margin: 30px 0 0 20px;
-}
-
-.readbtn {
-	float: left;
-	margin: 5px 0;
-	display: inline-block;
-	padding: 10px 16px;
-	font-size: 18px;
-	font-weight: 400;
-	line-height: 1.5;
-	text-align: center;
-	white-space: nowrap;
+	font-size: 16px;
 	vertical-align: middle;
-	touch-action: manipulation;
-	cursor: pointer;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	background-image: none;
-	border: 1px solid transparent;
-	border-radius: 6px;
-	background-color: #11c183;
-	color: #fff;
-}
-.readbtn:hover{
-	background-color: #09b579;
-	text-decoration: none;
-	color: #fff;
+	padding: 20px;
 }
 
 .comic-chapter-list {
@@ -308,7 +682,8 @@ h1.comic-title span{
 }
 .comic-chapter-wrapper {
 	border-top: 1px dashed #c8c9cd;
-	padding-top: 20px;
+	padding: 20px;
+	margin: 20px;
 }
 .comic-chapter-wrapper .title{
 	float: left;
@@ -321,334 +696,7 @@ h1.comic-title span{
 	margin: 8px 0 0 10px;
 	color: #999;
 }
-.popular {
-	height: 30px;
-	line-height: 30px;
-	background-color:#eee;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
-	margin-top: 10px;
-	font-size: 12px;
-	padding: 0 16px;
-}
-.popular .key{
-	color:#666;
-	font-weight: bolder;
-	width: 2px;
-	border-left: 2px solid #0aa770;
-	padding-left: 7px;
-}
-.popular .value {
-	display: inline;
-	padding-left: 10px;
-}
-.popular .value a {
-	color: #333;
-	margin-right: 15px;
-}
 
-.hotspot {
-	height: 455px;
-	margin-top: 10px;
-}
-.hotspot .hotspot-slider {
-	float: left;
-	width: 910px;
-	height: 100%;
-	overflow: hidden;
-	position: relative;
-	background-image: -webkit-gradient(linear,0 0,0 100%,from(rgba(225,225,225,0)),to(rgba(0,0,0,.8)));
-}
-.hotspot .hotspot-sidebar {
-	width: 279px;
-	float: right;
-	background-color:#333;
-}
-
-.ranking {
-	width: 100%;
-	height: 100%;
-	background-color:#333;
-}
-.ranking .head-wrap h2.title {
-	color: #666;
-	font-size: 18px;
-	height: 30px;
-	line-height: 30px;
-	float: left;
-	margin-left: 5px;
-}
-.ranking .head-wrap h2.green-title {
-	color: #ccc;
-	border-left: 2px solid #0aa770;
-	padding-left: 8px;
-	margin: 9px 0 0 20px;
-	height: 20px;
-	line-height: 20px;
-}
-.ranking .head-wrap .tab-wrap {
-	float:right;
-}
-.ranking .head-wrap .tab-wrap .item {
-	float: left;
-	height: 30px;
-	line-height: 30px;
-	font-size:14px;
-	padding: 0 8px;
-	margin-right: 5px;
-}
-.ranking .list-wrap {
-	background-color:#333;
-	margin-top: 18px;
-	width: 100%;
-}
-.ranking .list-wrap .list-page {
-	width: 100%;
-	margin-top: 11px;
-
-}
-.ranking .list-wrap .list-page .topone {
-	padding: 0 20px;
-	height: 136px;
-}
-.ranking .list-wrap .list-page .topone .pic-wrap{
-	float: left;
-	width: 102px;
-	height: 100%;
-	background: url(../images/thum-bg.png) no-repeat;
-	position: relative;
-	margin-right: 8px;
-}
-.ranking .list-wrap .list-page .topone .pic-wrap .pic{
-	width: 94px;
-	height: 125px;
-	vertical-align: middle;
-	margin: 1px 0 0 1px;
-}
-.ranking .list-wrap .list-page .topone .pic-wrap .sort{
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 25px;
-	height: 24px;
-	line-height: 24px;
-	text-align: center;
-	background-color: #0aa770;
-	color: #fff;
-	font-size: 12px;
-}
-
-.ranking .list-wrap .list-page .topone .info-wrap{
-	width: 129px;
-	float: right;
-	font-size: 12px;
-	height: 100%;
-	line-height: 1.5;
-}
-.ranking .list-wrap .list-page .topone .info-wrap .title{
-	color: #ddd;
-	margin-top: 6px;
-}
-.ranking .list-wrap .list-page .topone .info-wrap .title:hover{
-	color:#f50;
-}
-.ranking .list-wrap .list-page .topone .info-wrap .des{
-	color:#999;
-	margin-top: 20px;
-}
-.ranking .list-wrap .list-page .topone .info-wrap .info {
-	font-size: 12px;
-	margin-top: 10px;
-}
-.ranking .list-wrap .list-page .topone .info-wrap .info .key {
-	color: #999;
-}
-.ranking .list-wrap .list-page .topone .info-wrap .info .value{
-	color: #666;
-}
-.ranking .list-wrap .list-page .topone .info-wrap .info .value a{
-	margin-right: 5px;
-}
-.ranking .list-wrap .list-page .list {
-	padding: 0 8px;
-}
-.ranking .list-wrap .list-page .list .item {
-	border-bottom: 1px dashed #555;
-	display:block;
-	height: 30px;
-	line-height: 30px;
-	font-size: 12px;
-}
-.ranking .list-wrap .list-page .list .item .sort {
-	display: inline-block;
-	color: #aaa;
-	width: 15px;
-	margin: 0 3px 0 17px;
-	text-align: center;
-	vertical-align: middle;
-}
-.ranking .list-wrap .list-page .list .item .sort.high {
-	color:#0aa770;
-}
-.ranking .list-wrap .list-page .list .item:hover .title, .ranking .list-wrap .list-page .list .item:hover .des{
-	color: #f50;
-}
-.ranking .list-wrap .list-page .list .item:hover {
-	background-color:#666;
-}
-.ranking .list-wrap .list-page .list .item .title{
-	width: 110px;
-	color: #ddd;
-	display: inline-block;
-	text-align: left;
-	vertical-align: middle;
-}
-.ranking .list-wrap .list-page .list .item .des{
-	width: 100px;
-	color: #999;
-	display: inline-block;
-	text-align: right;
-	vertical-align: middle;
-}
-.ranking-light {
-	background-color:transparent;
-}
-.ranking-light .list-wrap {
-	background-color: #eee;
-}
-.ranking-light .list-wrap:after {
-	display:table;
-	clear:both;
-	line-height:0;
-	content: "";
-}
-.ranking-light .list-wrap .list-page .list .item {
-	border-bottom: 1px dashed #d5d4d8;
-}
-.ranking-light .list-wrap .list-page .topone .info-wrap {
-	width: 110px;
-}
-.ranking-light .list-wrap .list-page .topone .info-wrap .title {
-	color: #333;
-}
-.ranking-light .list-wrap .list-page .list .item .title{
-	color: #333;
-	width: 135px;
-}
-.ranking-light .list-wrap .list-page .list .item .des{
-	color: #999;
-	width: 60px;
-}
-.ranking-light .list-wrap .list-page .list .item:hover {
-	background-color:#fefefe;
-}
-.classify-box {
-	height: 92px;
-	margin-top: 20px;
-}
-.classify-box .classify-wrap {
-	float: left;
-	width: 907px;
-	height: 90px;
-	border: 1px solid #ddd;
-	background-color: #fafafa;
-}
-.classify-box .classify-wrap .item {
-	height: 48px;
-	float: left;
-	margin-tip: 8px;
-	padding: 13px 0;
-	border-right: 1px dashed #f1f1f1;
-}
-.classify-box .classify-wrap .item h3.title{
-	font-size: 16px;
-	color:#0aa770;
-	height: 100%;
-	border-left: 2px solid #0aa770;
-	padding-left: 10px;
-	width: 30px;
-	float: left;
-	line-height: 16px;
-	margin-left: 16px;
-}
-.classify-box .classify-wrap .item .list{
-	float: left;
-	height: 100%;
-	overflow: hidden;
-}
-.classify-box .classify-wrap .item .list a{
-	width: 43px;
-	text-align: left;
-	float: left;
-	color: #666;
-	font-size: 12px;
-	margin-bottom: 12px;
-	white-space: nowrap;
-	line-height: 1.5;
-}
-.classify-box .classify-wrap .item.first {
-	width: 510px;
-	margin-left:9px;
-}
-.classify-box .classify-wrap .item.second {
-	width: 230px;
-}
-.classify-box .classify-wrap .item.third {
-	border: 0;
-}
-.classify-box .classify-wrap .item.first .list {
-	width: 430px;
-}
-.classify-box .classify-wrap .item.second .list {
-	width: 165px;
-}
-.classify-box .classify-wrap .item.third .list {
-	width: 50px;
-}
-.classify-box .classify-wrap .item.third .list a:hover {
-	color: #f50;
-}
-.classify-box .ad {
-	width: 260px;
-	height: 100%;
-	float: right;
-}
-
-.comic-section-head {
-	height: 30px;
-}
-.comic-section-head h2 {
-	height: 30px;
-	line-height: 28px;
-	color: #666;
-	font-size: 28px;
-	float: left;
-}
-.comic-section-head .tab {
-	height: 30px;
-	float: left;
-	margin-left: 20px;
-}
-.comic-section-head .tab .item {
-	float: left;
-	line-height: 30px;
-	padding: 0 18px;
-	color: #666;
-}
-
-.comic-section-main {
-	margin-top: 18px;
-}
-.comic-section-main .list-wrap {
-	width: 930px;
-	position: relative;
-}
-.comic-section-main .list-wrap .list-page {
-	width: 930px;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
 .recommend-list {
 	width: 290px;
 	float: left;
@@ -725,115 +773,6 @@ h1.comic-title span{
 	
 }
 
-.choice-box {
-	background-color: #d5d4d8;
-	padding: 20px;
-}
-
-.choice-box li {
-	display: block;
-	width: 215px;
-	height: 100px;
-	margin-right: 18px;
-	float: left;
-}
-.choice-box img {
-	width: 100%;
-	height: 100%;
-}
-
-.thumb-list-item {
-	width: 135px;
-	height: 245px;
-	float: left;
-	margin: 0 20px 20px 0;
-}
-.thumb-list-item .pic-wrap {
-	display: block;
-	width: 135px;
-	height: 178px;
-	background: url(../images/thum-bg-135.jpg) 0 0 no-repeat;
-	position: relative;
-}
-.thumb-list-item .pic-wrap img{
-	width: 127px;
-	height: 170px;
-	vertial-align: middle;
-	margin: 1px 0 0 1px;
-}
-.thumb-list-item .title{
-	display: block;
-	width: 135px;
-	font-size: 14px;
-	color: #333;
-	margin-top: 8px;
-	line-height: 1.5;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-.thumb-list-item .title:hover{
-	color:#f50;
-}
-.thumb-list-item .des {
-	width: 135px;
-	font-size: 12px;
-	color: #999;
-	line-height: 18px;
-	margin-top: 3px;
-	overflow: hidden;
-}
-.comic-section-main .featured {
-	float: left;
-	display: block;
-	border: 1px solid #fff;
-	width: 288px;
-	height: 243px;
-	margin-bottom: 20px;
-	position: relative;
-	margin-right: 20px;
-}
-.comic-section-main .featured .pic{
-	width: 100%;
-	height: 100%;
-	vertical-align: middle;
-}
-.comic-section-main .featured .title{
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	font-size: 18px;
-	color:#fff;
-	height: 70px;
-	text-indent: 0.6em;
-	white-space: nowrap;
-	line-height: 60px;
-	text-overflow: ellipsis;
-	background-image: -webkit-gradient(linear,0 0,0 100%,from(rgba(225,225,225,0)),to(rgba(0,0,0,.8)));
-}
-.comic-section-main .featured .des {
-	position: absolute;
-	width: 100%;
-	bottom: 7px;
-	left: 0;
-	font-size: 12px;
-	color: #ccc;
-	text-indent: 0.9em;
-}
-
-.comic-sidebar {
-	float: right;
-	width: 260px;
-	
-}
-.comic-sidebar .ad{
-	display: block;
-	width: 260px;
-	height: 70px;
-	margin-top: 19px;
-}
-
 .chapter-list {
 	list-style: none;
 	font-size: 14px;
@@ -841,13 +780,18 @@ h1.comic-title span{
 }
 .chapter-list li {
 	display: block;
-	width: 25%;
+	width: 24.5%;
 	float: left;
 	height: 30px;
 	line-height: 30px;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+
+.tieba-container {
+	height: 400px;
+	overflow-y: scroll;
 }
 
 /*
@@ -866,17 +810,19 @@ h1.comic-title span{
 	margin-bottom: 5px;
 }
 
+
 footer {
 	width: 100%;
 	background-color: #e9e8ef;
 	border-top: 1px solid #e0e0e0;
+	color: #999;
 }
 .footer-logo {
-	margin-right: 20px;
-	float: left;
+
 }
 .site-footer {
 	margin-top: 50px;
+	padding: 30px 0;
 }
 .site-footer-container {
 	font-size: 16px;

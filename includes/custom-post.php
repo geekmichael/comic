@@ -38,7 +38,7 @@ add_action( 'init', function () {
 		'menu_position'			=> 5,
 		'rewrite'				=> array( 'slug' => __( 'comic', THEME_NAME ) ),
 		'supports'				=> array( 'title', 'editor', 'author', 'custom-fields' ),
-		'taxonomies'			=> array ('category'),
+		'taxonomies'			=> array ('category', 'post_tag'),
 	) );
 
 	// tags
@@ -84,11 +84,21 @@ function query_post_type($query) {
     if($post_type)
         $post_type = $post_type;
     else
-        $post_type = array('nav_menu_item', 'post', 'comic'); // don't forget nav_menu_item to allow menus to work!
+        $post_type = array('post', 'comic'); // don't forget nav_menu_item to allow menus to work!
     $query->set('post_type',$post_type);
     return $query;
     }
 }
+// Alter archive.php to include custom post types. 
+function namespace_add_custom_types( $query ) {
+  if( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
+    $query->set( 'post_type', array(
+     'post', 'nav_menu_item', 'comic'
+		));
+	  return $query;
+	}
+}
+add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
 
 // Add Custom Post Type's Archive in the Nav Menu
 
