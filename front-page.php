@@ -245,7 +245,7 @@ $current_url = home_url() . '/?cat='.COMICTHEME_CAT_ID;
 	<!--
 	<div class="row comic-row-ad">
 		<h2>AD</h2>
-	</div><!-- .comic-row-ad -->
+	</div>
 	-->
 	<div class="row comic-section">
 		<div class="row col-lg-9">
