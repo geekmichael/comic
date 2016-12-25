@@ -4,20 +4,10 @@ global $cat_status, $cat_audience, $cat_area, $cat;
 
 $cat_status = sanitising($_GET['comic-status']);
 $cat_audience = sanitising($_GET['comic-audience']);
-$cat_area = sanitising($_GET['comic-area']);
+$cat_area = sanitising($_GET['comic-national']);
 $cat = (int)(sanitising($_GET['cat']));
 if (!$cat) $cat=COMICTHEME_CAT_ID;
 
-//parse_str($querystr, $queryarr);
-
-//$queryurl = ($querystr ? ('/?'.$querystr) : '/');
-//$queryurl = esc_url(home_url('/')) . $queryurl; 
-// $queryurl = comic_filter_url(array(
-// 			'cat'=>$cat,
-// 			'status'=>$cat_status,
-// 			'audience'=>$cat_audience,
-// 			'area'=>$cat_area,
-// 			));
 ?>
 	<div class="container post-content">
 		<div class="row">

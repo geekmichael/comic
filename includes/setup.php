@@ -117,8 +117,11 @@ function acf_select_list($args = array(
 	unset($queryarr[$field['name']]);
 	// Re-create the link
 	$current_url = esc_url(home_url('/'));
-	if ($queryarr) 
-		$current_url = http_build_query($queryarr);
+	if ($queryarr) {
+		$current_url = '?'.http_build_query($queryarr);
+	} else {
+		$current_url .= '/?cat='.COMICTHEME_CAT_ID;
+	}
 	//die ($current_url);
 	if ($field) {
 		//var_dump ($field);

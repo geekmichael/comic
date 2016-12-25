@@ -1,39 +1,71 @@
 <?php
+$slides = array();
+$slideindicator = 0;
+if (have_rows('slideshows')) {
+//	die (var_dump(get_field('slideshows')));
+	while (have_rows('slideshows')):the_row();
+		$slidegroups = get_sub_field('slidegroups');
+		$slideindicator ++;
+		//die (var_dump($slidegroups));
+		foreach ($slidegroups as $groupkey => $slidegroup) {
+			//echo '<p>group:'.$slideindicator.'</p>';
+			foreach ($slidegroup as $postkey => $slidepost) {
+				$slides[$slideindicator][] = $slidepost->ID;
+				//echo $slidepost->ID;
+				//echo '<br />';
+			}
+		}
+	endwhile;
+}
+
+//die ();
+//die (var_dump($slides));
+
 get_template_part( 'templates/header' );
 
-if ( get_field( 'slides' ) ) {
-	$slides = get_field('slides');
-}else{
-	$slides = array (
-		array(
-			'image' => array (
-				'url'=>THEME_IMAGES_URI.'slideshow/slideshow_banner01.jpg',
-				'width'=>680,
-				'height'=>260,
-				'alt'=>'示例图片',
-				'mime_type'=>'image/jpeg',
-			),
-		),	);
-}
 
 $current_url = home_url() . '/?cat='.COMICTHEME_CAT_ID;
 
 ?>
 	<div class="row hotspot">
 		<div class="col-md-9 hotspot-slider">
-			<div id="carousel" class="carousel slide" data-ride="carousel">
+			<div id="carousel-comic" class="carousel slide" data-ride="carousel">
+				<!--
 				<ol class="carousel-indicators">
 					<?php foreach ( $slides as $key => $slide ): ?>
-					<li <?php if ($key == 0): ?>class="active"<?php endif; ?> data-target="#carousel" data-slide-to="<?php echo esc_attr( $key ); ?>"></li>
+					<li <?php if ($key==1): ?>class="active"<?php endif; ?> data-target="#carousel-comic" data-slide-to="<?php echo esc_attr( $key ); ?>"></li>
 					<?php endforeach; ?>
 				</ol>
-				<div class="carousel-inner">
+				-->
+				<div class="carousel-inner" role="listbox">
 					<?php foreach ( $slides as $key => $slide ): ?>
-						<div class="item <?php if ( $key == 0 ): ?>active<?php endif; ?>">
-							<img src="<?php echo esc_url( $slide['image']['url'] ); ?>" width="<?php echo esc_attr( $slide['image']['width'] ); ?>" height="<?php echo esc_attr( $slide['image']['height'] ); ?>" alt="<?php echo esc_attr( $slide['image']['alt'] ); ?>">
+						<div class="item <?php if ($key==1): ?>active<?php endif; ?>">
+							<?php 
+							foreach ($slide as $slidekey => $slidepost):
+							$slideimage = wp_get_attachment_image_url(get_post_thumbnail_id($slidepost),'large');
+							//die ($slideimage);
+							?>
+							<div class="slide-item<?php echo esc_attr($slidekey); ?>">
+							<a href="<?php echo get_the_permalink($slidepost); ?>" title="<?php echo get_the_title($slidepost) ?>">
+							<img id="post-thumbnail-<?php echo $slidepost; ?>" src="<?php echo $slideimage; ?>" class="slide-pic" />
+							</a>
+							<div class="carousel-caption">
+								<h3><?php echo get_the_title($slidepost) ?></h3>
+								<p><?php echo get_field('comic-slogan',$slidepost); ?></p>
+							</div>
+							</div>
+							<?php endforeach; ?>
 						</div>
 					<?php endforeach; ?>
 				</div>
+				<a class="left carousel-control" href="#carousel-comic" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#carousel-comic" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
 			</div>		
 		</div>
 		<div class="col-md-3 hotspot-sidebar pull-right">
