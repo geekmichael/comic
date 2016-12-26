@@ -3,7 +3,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta http-equiv="x-ua-compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title><?php wp_title( '&middot;', true, 'right' ); ?><?php bloginfo('name'); ?></title>
 	<link rel="stylesheet" href="<?php echo THEME_STYLESHEETS_URI; ?>bootstrap.min.css" />
 	<!--link rel="stylesheet" href="<?php echo THEME_STYLESHEETS_URI; ?>normalize.css" /-->
@@ -20,7 +20,7 @@
 <header id="site-header" class="header">
 	<div class="header-wrapper">
 		<div class="header-container clearfix">
-			<div class="col-lg-9 site-logo">
+			<div class="col-md-9 site-logo">
 				<a class="header-logo-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home">
 					<?php if ( $logotype = comic_options( 'header_logotype' ) ): ?>
 						<?php $logotype_src = wp_make_link_relative( $logotype ); ?>
@@ -35,7 +35,7 @@
 					<?php endif; ?>
 				</a>
 			</div><!-- .site-logo -->
-			<div class="col-lg-3 header-search-box">
+			<div class="col-md-3 header-search-box">
 				<form class="search-form clearfix" data-hook="search-form" action="/" method="get">
 				<div class="input-group">
 					<input type="text" name="s" class="form-control" id="search" value="<?php the_search_query(); ?>" placeholder="漫画书名" />

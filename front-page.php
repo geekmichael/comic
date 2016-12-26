@@ -140,7 +140,7 @@ $current_url = home_url() . '/?cat='.COMICTHEME_CAT_ID;
 		</div>
 	</div><!-- .classify-box -->
 	<div class="row comic-section">
-		<div class="col-lg-9 row">
+		<div class="col-md-9 row">
 			<div class="tabbable comic-section-head">
 				<h2>热门漫画</h2>
 				<ul id="PopularTab" class="nav nav-tabs" role="popularlist">
@@ -179,7 +179,7 @@ $current_url = home_url() . '/?cat='.COMICTHEME_CAT_ID;
 				</div><!-- .tab-content -->
 			</div>
 		</div>
-		<div class="col-lg-3 pull-right comic-sidebar">
+		<div class="col-md-3 pull-right comic-sidebar">
 			<div class="ranking ranking-light">
 				<div class="head-wrap clearfix">
 					<h2 class="title">漫画人气排行</h2>
@@ -248,7 +248,7 @@ $current_url = home_url() . '/?cat='.COMICTHEME_CAT_ID;
 	</div>
 	-->
 	<div class="row comic-section">
-		<div class="row col-lg-9">
+		<div class="row col-md-9">
 			<div class="comic-section-head">
 				<h2>最近更新</h2>
 			</div>
@@ -305,7 +305,7 @@ $current_url = home_url() . '/?cat='.COMICTHEME_CAT_ID;
 				?>
 			</div><!-- .featured-list -->
 		</div>
-		<div class="col-lg-3 comic-sidebar">
+		<div class="col-md-3 comic-sidebar">
 			<div class="ranking ranking-light">
 				<div class="head-wrap clearfix">
 					<h2 class="title">漫画更新表</h2>

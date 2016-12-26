@@ -55,7 +55,7 @@ a:hover {
 	padding-right: 15px;
 	padding-left: 15px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
 	.col-lg-2dot4 {
 		float: left;
 	}
