@@ -46,6 +46,16 @@ add_action( 'load-index.php', function() {
 } );
 
 /**
+ * Disable Access to the WordPress Dashboard for Non-Admins
+ */
+add_action('admin_init', 'no_mo_dashboard');
+function no_mo_dashboard() {
+  if (!current_user_can('manage_options') && $_SERVER['DOING_AJAX'] != '/wp-admin/admin-ajax.php') {
+  wp_redirect(home_url()); exit;
+  }
+}
+
+/**
  * Remove the WordPress version from RSS feeds.
  */
 add_filter( 'the_generator', '__return_false' );
