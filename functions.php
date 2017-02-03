@@ -2,7 +2,7 @@
 
 // theme constants
 define( 'THEME_NAME', 'comic' );
-
+define( 'URL_SEPARATOR', '/');
 //漫画题材分类ID
 define( 'COMICTHEME_CAT_ID', 31);
 //Advanced Custom Fields 自定义字段密钥
@@ -11,12 +11,12 @@ define( 'COMIC_AREA_KEY', 'field_585607cece62d' );
 define( 'COMIC_AUDIENCE_KEY', 'field_585608f7ce62f' );
 
 // uri constants
-//define( 'THEME_URI', wp_make_link_relative( get_stylesheet_directory_uri() . DIRECTORY_SEPARATOR ) );
-define( 'THEME_URI', get_stylesheet_directory_uri() . DIRECTORY_SEPARATOR );
-define( 'THEME_ASSETS_URI', THEME_URI . 'assets' . DIRECTORY_SEPARATOR );
-define( 'THEME_IMAGES_URI', THEME_ASSETS_URI . 'images' . DIRECTORY_SEPARATOR );
-define( 'THEME_STYLESHEETS_URI', THEME_ASSETS_URI . 'css' . DIRECTORY_SEPARATOR );
-define( 'THEME_JAVASCRIPTS_URI', THEME_ASSETS_URI . 'js' . DIRECTORY_SEPARATOR );
+//define( 'THEME_URI', wp_make_link_relative( get_stylesheet_directory_uri() . URL_SEPARATOR ) );
+define( 'THEME_URI', get_stylesheet_directory_uri() . URL_SEPARATOR );
+define( 'THEME_ASSETS_URI', THEME_URI . 'assets' . URL_SEPARATOR );
+define( 'THEME_IMAGES_URI', THEME_ASSETS_URI . 'images' . URL_SEPARATOR );
+define( 'THEME_STYLESHEETS_URI', THEME_ASSETS_URI . 'css' . URL_SEPARATOR );
+define( 'THEME_JAVASCRIPTS_URI', THEME_ASSETS_URI . 'js' . URL_SEPARATOR );
 
 // dir constants
 define( 'THEME_DIR', get_stylesheet_directory() . DIRECTORY_SEPARATOR );

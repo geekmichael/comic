@@ -156,8 +156,12 @@ function comic_filter_url($args = array(
 	'audience' => '',
 	'status' => '',
 )) {
-	if (!$args['cat']) $args['cat'] = COMICTHEME_CAT_ID;
-	$args['home-url'] = (!empty($args['home-url'])) ? $args['home-url'] : esc_url(home_url('/'));
+	//if (!$args['cat']) $args['cat'] = COMICTHEME_CAT_ID;
+	$args['cat'] = $args['cat'] || COMICTHEME_CAT_ID;
+	
+	//$args['home-url'] = (!empty($args['home-url'])) ? $args['home-url'] : esc_url(home_url('/'));
+	$args['home-url'] = $args['home-url'] || esc_url(home_url('/'));
+	
 	$tmpurl  = $args['home-url'].'?cat='.$args['cat'];
 	if ($args['area']) $tmpurl .= '&comic-area='.$args['area'];
 	if ($args['audience']) $tmpurl .= '&comic-audience='.$args['audience'];
